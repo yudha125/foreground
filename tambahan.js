@@ -54,6 +54,21 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    const bannerDiv = document.createElement('div');
+    bannerDiv.className = 'custom-banner';
+    bannerDiv.style.margin = '20px 0';
+    bannerDiv.innerHTML = `
+    <img src="giftpanjang.gif" alt="Banner Iklan" style="width:100%; max-width:840px; display:block; margin:0 auto;">
+    `;
+
+    // Cari parent container
+    const slider = document.getElementById('slider');
+    const parent = slider.parentNode;
+
+    // Sisipkan setelah slider
+    if (slider && parent) {
+        parent.insertBefore(bannerDiv, document.getElementById('latest-results'));
+    }
 
 
     const slideCarousel = document.querySelectorAll(".slider .item");
@@ -89,6 +104,34 @@ document.addEventListener("DOMContentLoaded", function () {
         latestResults.parentNode.insertBefore(topFrame, latestResults);
         latestResults.parentNode.insertBefore(bottomFrame, latestResults.nextSibling);
     }
+    const imgSisi1 = document.createElement('img');
+    imgSisi1.src = 'sisi.png'; // Ganti dengan path gambar kamu
+    imgSisi1.alt = 'Floating Banner';
+    imgSisi1.id = 'floating-banner2'; // Tambahkan ID untuk styling jika diperlukan
+
+    // Tambahkan style position absolute dan lainnya
+    imgSisi1.style.position = 'fixed';
+    imgSisi1.style.top = '0';        // Sesuaikan posisi vertikal
+    imgSisi1.style.left = '0';      // Bisa diganti ke 'left' jika perlu
+    imgSisi1.style.width = '150px';     // Atur ukuran sesuai kebutuhan
+    imgSisi1.style.zIndex = '9999';
+    imgSisi1.style.cursor = 'pointer';
+
+    document.body.appendChild(imgSisi1);
+    const imgSisi2 = document.createElement('img');
+    imgSisi2.src = 'sisi.png'; // Ganti dengan path gambar kamu
+    imgSisi2.alt = 'Floating Banner';
+    imgSisi2.id = 'floating-banner2'; // Tambahkan ID untuk styling jika diperlukan
+
+    // Tambahkan style position absolute dan lainnya
+    imgSisi2.style.position = 'fixed';
+    imgSisi2.style.top = '0';        // Sesuaikan posisi vertikal
+    imgSisi2.style.right = '0';      // Bisa diganti ke 'left' jika perlu
+    imgSisi2.style.width = '150px';     // Atur ukuran sesuai kebutuhan
+    imgSisi2.style.zIndex = '9999';
+    imgSisi2.style.cursor = 'pointer';
+
+    document.body.appendChild(imgSisi2);
     // const sectionTop = document.querySelectorAll("section.margin-top");
     // const kontainerTambahan = document.createElement("div");
     // kontainerTambahan.className = "container container-plus-1";
